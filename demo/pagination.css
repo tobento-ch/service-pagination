@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+* {	margin: 0; padding: 0;}
+html { box-sizing: border-box;}
+*, *:before, *:after { box-sizing: inherit;}
+body { font-family: Arial; color: #0d0e0e; font-size: 100%;}
+
+/* Title and Links */
+h1 { font-size: 3rem; font-weight: 900; }
+a {	color: #eb65a0;	text-decoration:none;}
+a:hover{text-decoration:none; color: #9CBF5C;}
+a:focus{text-decoration:none; background: #9CBF5C; color: #fff !important;}
+a:active{text-decoration:none; background: #9CBF5C;}
+a.active{text-decoration:none; color: #9CBF5C;}
+
+/* Layout */
+article{ padding: 30px;}
+article h1{ margin-bottom: 10px;}
+section h2{ margin-bottom: 5px;}
+section { margin-top: 50px;}
+p{ margin-bottom: 10px;}
+
+/* Pagination */
+ul.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+ul.pagination:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ul.pagination li {
+    margin: 0 1px 1px;
+    float: left;
+}
+
+ul.pagination a, ul.pagination span {
+    display: block;
+    padding: .5em 1em;
+    border: 1px solid #999;
+    border-radius: .2em;
+    text-decoration: none;
+}
+
+ul.pagination li.current span {
+    background: #eb65a0;
+}
+
+@media screen and (max-width: 800px){
+    ul.pagination li.page { display: none;}
+}

@@ -24,10 +24,10 @@ ___
 
 # Getting started
 
-Add the latest version of the Language service project running this command.
+Add the latest version of the Pagination service project running this command.
 
 ```
-composer require tobento/service-language
+composer require tobento/service-pagination
 ```
 
 ## Requirements

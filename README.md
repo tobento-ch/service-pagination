@@ -287,16 +287,16 @@ use Tobento\Service\Pagination\PaginationInterface;
 use Tobento\Service\View\ViewInterface;
 use Tobento\Service\View\View;
 use Tobento\Service\View\PhpRenderer;
-use Tobento\Service\View\Dirs;
-use Tobento\Service\View\Dir;
+use Tobento\Service\Dir\Dirs;
+use Tobento\Service\Dir\Dir;
 use Tobento\Service\View\Data;
 use Tobento\Service\View\Assets;
 
 $view = new View(
     new PhpRenderer(
-        new Dirs([
+        new Dirs(
             new Dir('home/private/views/')
-        ])
+        )
     ),
     new Data(),
     new Assets('home/public/src/', 'https://www.example.com/src/')
@@ -330,7 +330,7 @@ echo $pagination;
 ***The view template***
 
 ```php
-<?php if ($pagination->getTotalPages() <= 1) { ?>
+<?php if ($pagination->getTotalPages() > 1) { ?>
     <nav class="pagination">
         <ul class="pagination">    
             <?php if ($pagination->getPrevPageUrl()) { ?>
